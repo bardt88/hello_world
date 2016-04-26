@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1461613505 source:c:\users\bart\documents\projects\hello_world\src\myclass.cpp
+	"myClass.h"
+	<iostream>
+
+1461612995 c:\users\bart\documents\projects\hello_world\src\myclass.h
+
+1461613407 source:c:\users\bart\documents\projects\hello_world\src\main.cpp
+	"myClass.h"
+	<iostream>
+
