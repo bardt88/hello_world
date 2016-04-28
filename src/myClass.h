@@ -4,8 +4,13 @@
 class myClass
 {
 	public:
+	    myClass();
+	    ~myClass();
 		sayHello();
-		getNumber();
-		sumNumbers();
+		int getNumber();
+		sumNumbers(int x, int y);
+		printSumResult(int x);
+
+
 };
 
