@@ -8,7 +8,8 @@ int main()
 	int sum = 0;
 
 	int b;
-    myClass myObject;
+    myClass myObject(3, 2);
+    myObject.printCter();
 	cout << "enter number of values" << endl;
 	int a;
 	a = myObject.getNumber();

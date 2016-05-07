@@ -4,21 +4,27 @@
 
 using namespace std;
 
-myClass::myClass(){
+myClass::myClass(int a, int b)
+: var1(a), var2(b)
+{
     cout << "hi!" << endl;
+}
+
+void myClass::printCter(){
+    cout << "print: " << var1 << " and " << var2 << endl;
 }
 
 myClass::~myClass(){
     cout << "bye!" << endl;
 }
 
-myClass::sayHello(){
+void myClass::sayHello(){
 
     cout << "Hello world!" << endl;
 
 }
 
-myClass::getNumber(){
+int myClass::getNumber(){
     int x;
     cin >> x;
     while(cin.fail()){
@@ -30,14 +36,18 @@ myClass::getNumber(){
     return x;
 }
  
-myClass::
+int myClass::
     sumNumbers(int x, int y){
     int sum;
     sum = x + y;
     return sum;
 }
 
-myClass::printSumResult(int x){
+void myClass::printSumResult(int x){
     cout << "sum result: " << x << endl;
+}
+
+void myClass::constFunc() const {
+    cout << "constant function" << endl;
 }
 
