@@ -9,7 +9,13 @@ int main()
 
 	int b;
     myClass myObject(3, 2);
-    myObject.printCter();
+    //myObject.printAddr();
+    myObject.printUsers();
+    myObject.addUser();
+    myObject.printUsers();
+
+
+/*    myObject.printCter();
 	cout << "enter number of values" << endl;
 	int a;
 	a = myObject.getNumber();
@@ -19,5 +25,5 @@ int main()
 		sum = myObject.sumNumbers(sum, b);
 	}
 	cout << "sum = " << sum << endl;
-    return 0;
+    return 0;*/
 }

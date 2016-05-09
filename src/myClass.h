@@ -12,6 +12,10 @@ class myClass
 		int sumNumbers(int x, int y);
 		void printSumResult(int x);
         void constFunc() const ;
+        int * users();
+        void printAddr();
+        void printUsers();
+        void addUser();
         int var1;
         int var2;
 

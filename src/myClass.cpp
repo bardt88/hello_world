@@ -29,13 +29,13 @@ int myClass::getNumber(){
     cin >> x;
     while(cin.fail()){
         cout << "Not a number. Please enter a number" << endl;
-        cin.clear(); 
+        cin.clear();
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         cin >> x;
     }
     return x;
 }
- 
+
 int myClass::
     sumNumbers(int x, int y){
     int sum;
@@ -49,5 +49,34 @@ void myClass::printSumResult(int x){
 
 void myClass::constFunc() const {
     cout << "constant function" << endl;
+}
+
+int * myClass::users(){
+    int users = 4;
+    int *pUsers = &users;
+    return pUsers;
+}
+
+void myClass::printAddr(){
+    cout << "addr= " << myClass::users() << endl;
+}
+
+void myClass::printUsers(){
+    int *a = users();
+    cout << "addr= " << &a << " value= " << *a << endl;
+    //int i = 2;
+    //a = &i;
+    //cout << "value = " << *a << endl;
+}
+
+void myClass::addUser(){
+    int *userss = users();
+    cout << "addr= " << &userss << " value= " << *userss << endl;
+    int i = 16;
+    int &ii = *userss;
+    cout << "addr= " << &ii << " value= " << ii << endl;
+    ii = i;
+    cout << "addr= " << &ii << " value= " << ii << endl;
+
 }
 
