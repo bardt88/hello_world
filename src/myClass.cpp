@@ -4,6 +4,9 @@
 
 using namespace std;
 
+string gUsers[4] = {"a", "b", "c", "d"};
+int nUsers = 0;
+
 myClass::myClass(int a, int b)
 : var1(a), var2(b)
 {
@@ -61,15 +64,23 @@ void myClass::printAddr(){
     cout << "addr= " << myClass::users() << endl;
 }
 
-void myClass::printUsers(){
+/*void myClass::printUsers(){
     int *a = users();
     cout << "addr= " << &a << " value= " << *a << endl;
     //int i = 2;
     //a = &i;
     //cout << "value = " << *a << endl;
+//    cout << gUsers << endl;
+}*/
+
+void myClass::printUsers(){
+    for (int i = 0; i < nUsers; ++i)
+    {
+        cout << gUsers[i] << endl;
+    }
 }
 
-void myClass::addUser(){
+/*void myClass::addUser(){
     int *userss = users();
     cout << "addr= " << &userss << " value= " << *userss << endl;
     int i = 16;
@@ -77,6 +88,38 @@ void myClass::addUser(){
     cout << "addr= " << &ii << " value= " << ii << endl;
     ii = i;
     cout << "addr= " << &ii << " value= " << ii << endl;
+}*/
 
+void myClass::addUser(){
+    cout << "Username: " ;
+    cin >> gUsers[nUsers] ;
+    nUsers++;
 }
 
+void myClass::printGlobal(){
+    cout << gUsers[1] << endl;
+}
+
+void myClass::mainLoop(){
+    string doFunc;
+    while(true){
+        cout << "user: " ;
+        cin >> doFunc;
+        if (doFunc == "adduser")
+        {
+            addUser();
+        }
+        else if(doFunc == "printusers")
+        {
+            printUsers();
+        }
+        else{
+            cout << "Invalid command" << endl;
+        }
+    }
+}
+
+void myClass::callFunc(char a){
+
+
+}

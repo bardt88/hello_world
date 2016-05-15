@@ -10,11 +10,13 @@ int main()
 	int b;
     myClass myObject(3, 2);
     //myObject.printAddr();
-    myObject.printUsers();
-    myObject.addUser();
-    myObject.printUsers();
-
-
+ //   myObject.printUsers();
+   // myObject.addUser();
+   // myObject.printUsers();
+    //myObject.printUsers();
+    //myObject.addUser();
+    //myObject.printUsers();
+	myObject.mainLoop();
 /*    myObject.printCter();
 	cout << "enter number of values" << endl;
 	int a;
