@@ -5,6 +5,7 @@
 using namespace std;
 
 string gUsers[4] = {"a", "b", "c", "d"};
+string currUser = "userr";
 int nUsers = 0;
 
 myClass::myClass(int a, int b)
@@ -92,18 +93,50 @@ void myClass::printUsers(){
 
 void myClass::addUser(){
     cout << "Username: " ;
-    cin >> gUsers[nUsers] ;
-    nUsers++;
+    string newUSer;
+    cin >> newUSer;
+    for (int i = 0; i <= nUsers; ++i)
+    {
+        if (newUSer == gUsers[i])
+        {
+            cout << "Error: User already exists!" << endl;
+            break;
+        }
+        else if (i == nUsers)
+        {
+            gUsers[nUsers] = newUSer;
+            nUsers++;
+            break;
+        }
+    }
 }
 
 void myClass::printGlobal(){
     cout << gUsers[1] << endl;
 }
 
+void myClass::setUser(){
+    cout << "Insert user name: ";
+    string setUserTo;
+    cin >> setUserTo;
+    for (int i = 0; i < nUsers; ++i)
+    {
+        if (setUserTo == gUsers[i])
+        {
+            cout << "current user is: " << setUserTo << endl;
+            currUser = setUserTo;
+        }
+        else if(i == nUsers-1)
+        {
+            cout << "user not found" << endl;
+        }
+    }
+}
+
 void myClass::mainLoop(){
     string doFunc;
     while(true){
-        cout << "user: " ;
+        cout << currUser << ": " ;
         cin >> doFunc;
         if (doFunc == "adduser")
         {
@@ -112,6 +145,10 @@ void myClass::mainLoop(){
         else if(doFunc == "printusers")
         {
             printUsers();
+        }
+        else if(doFunc == "setUser")
+        {
+            setUser();
         }
         else{
             cout << "Invalid command" << endl;

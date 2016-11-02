@@ -16,6 +16,7 @@ class myClass
         void printAddr();
         void printUsers();
         void addUser();
+        void setUser();
         void printGlobal();
         void mainLoop();
         void callFunc(char a);
